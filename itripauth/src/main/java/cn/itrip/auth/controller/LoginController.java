@@ -73,7 +73,7 @@ public class LoginController {
 				String token = tokenService.generateToken(
 						request.getHeader("user-agent"), user);
 				tokenService.save(token, user);
-				
+				System.out.println("12345");
 				//返回ItripTokenVO
 				ItripTokenVO tokenVO=new ItripTokenVO(token,
 						Calendar.getInstance().getTimeInMillis()+TokenService.SESSION_TIMEOUT*1000,//2h有效期
